@@ -19,7 +19,7 @@ RUN go get github.com/google/stenographer && \
     chown -R stenographer:stenographer /data/stenographer
 
 # Copy over default config    
-COPY config /etc/stenographer/config
+COPY etc/config /etc/stenographer/config
 
 # Generate keys and copy executables
 RUN chmod 644 /etc/stenographer/config && \

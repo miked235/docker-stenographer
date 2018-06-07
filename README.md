@@ -4,9 +4,9 @@
 
 For deploying Stenographer within a Docker container, please first confirm your network interface and port number in the ```config``` and ```Dockerfile``` before continuing. 
 
-To run Stenographer, please use the command below (remember to change the port):
+After building Stenographer, please use the command below (remember to change the port) to run it locally:
 ```
-sudo docker run -p 1234 -itd --cap-add NET_RAW --cap-add NET_ADMIN --cap-add IPC_LOCK --name stenographer stenographer
+sudo docker run -p 9005:9005 -itd --cap-add NET_RAW --cap-add NET_ADMIN --cap-add IPC_LOCK --network host --name stenographer stenographer
 ```
 
 ## Kubernetes
