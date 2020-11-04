@@ -2,6 +2,7 @@ FROM centos:latest
 
 # Install Dependencies 
 RUN yum -y install epel-release
+RUN yum -y install yum-uils && yum-config-manager --enable PowerTools
 RUN yum install -y tcpdump sudo libaio-devel leveldb-devel snappy-devel libcap-devel libseccomp-devel \
     gcc-c++ make git golang jq which openssl
 
